@@ -1,0 +1,337 @@
+
+🕒 Time & Date
+
+"What’s the time right now?" → time /t
+
+"What’s today’s date?" → date /t
+
+"What day of the week is it?" → (AI logic from date /t)
+
+"What’s my timezone?" → tzutil /g
+
+"When was my PC last restarted?" → net statistics workstation
+
+📂 Files & Folders
+
+"Show me my Downloads folder" → start downloads
+
+"Open my Documents" → start documents
+
+"Go to Desktop" → explorer %userprofile%\Desktop
+
+"What’s inside this folder?" → dir
+
+"Show hidden files here" → dir /a:h
+
+🖥️ Apps & Processes
+
+"What apps are open right now?" → tasklist
+
+"Close Notepad" → taskkill /IM notepad.exe /F
+
+"Start Calculator" → start calc
+
+"Open Chrome" → start chrome
+
+"Is Spotify running?" → tasklist | find "Spotify.exe"
+
+🌐 Network & Internet
+
+"What’s my IP address?" → ipconfig
+
+"What Wi-Fi am I connected to?" → netsh wlan show interfaces
+
+"List saved Wi-Fi networks" → netsh wlan show profiles
+
+"Ping Google" → ping google.com
+
+"Do I have internet?" → ping 8.8.8.8 -n 1
+
+🔊 Sound & Display
+
+"Open volume mixer" → sndvol
+
+"Mute system sound" → (PowerShell/Audio control)
+
+"Unmute system sound" → (same)
+
+"Open display settings" → desk.cpl
+
+"Take a screenshot" → (AI triggers Snipping Tool or snippingtool /clip)
+
+📅 Calendar & Reminders
+
+"What’s today’s date?" → date /t
+
+"What day of the week is today?" → AI calculates from date
+
+"When’s the next system update check?" → wmic qfe list
+
+"Show me time zone settings" → start timedate.cpl
+
+"Resync my clock" → w32tm /resync
+
+🔐 User & Security
+
+"Who am I logged in as?" → whoami
+
+"What’s my computer name?" → hostname
+
+"List all users on this PC" → net user
+
+"Do I have admin rights?" → net session (fails if not admin)
+
+"What’s my Windows version?" → ver
+
+That’s just 35 to get the vibe.
+If you want, I can blow this list up into a full 100+ natural voice-style commands (like Siri-style prompts) with the matching CMD/Powershell under each.
+
+👉 Do you want me to generate the full 100 “assistant-style” commands + backend CMD equivalents so your AI can literally just map user requests directly?
+
+You said:
+yes gimme all 100
+ChatGPT said:
+
+Perfect 🚀 I’ll build you a full Siri-style command list (100 commands) where the front side is the natural voice/assistant request (what you’d say to your AI) and the back side is the CMD/PowerShell command your AI can run to serve it.
+
+Everything here is safe, non-destructive, and obvious.
+
+🕒 Time & Date (10)
+
+"What’s the time right now?" → time /t
+
+"What’s today’s date?" → date /t
+
+"What day is it?" → date /t (AI extracts weekday)
+
+"What’s my timezone?" → tzutil /g
+
+"List all time zones" → tzutil /l
+
+"Resync my clock" → w32tm /resync
+
+"Show me clock settings" → start timedate.cpl
+
+"What’s my system uptime?" → net statistics workstation
+
+"When did I last restart?" → net statistics workstation
+
+"Check if my clock is synced" → w32tm /query /status
+
+📂 Files & Folders (10)
+
+"Show me my Downloads folder" → start downloads
+
+"Open my Documents" → start documents
+
+"Go to Desktop" → explorer %userprofile%\Desktop
+
+"List everything in this folder" → dir
+
+"Show hidden files here" → dir /a:h
+
+"Go to C drive" → cd C:\
+
+"Open current folder in Explorer" → start .
+
+"What files are in my Pictures?" → dir "%userprofile%\Pictures"
+
+"Open my Music folder" → start music
+
+"Open my Videos folder" → start videos
+
+🖥️ Apps & Processes (10)
+
+"What apps are open right now?" → tasklist
+
+"Close Notepad" → taskkill /IM notepad.exe /F
+
+"Open Calculator" → start calc
+
+"Start Notepad" → start notepad
+
+"Open Chrome" → start chrome
+
+"Is Spotify running?" → tasklist | find "Spotify.exe"
+
+"Show me running tasks" → tasklist
+
+"Open Task Manager" → taskmgr
+
+"Start Paint" → mspaint
+
+"Open File Explorer" → explorer
+
+🌐 Network & Internet (15)
+
+"What’s my IP address?" → ipconfig
+
+"Show me full network details" → ipconfig /all
+
+"What Wi-Fi am I connected to?" → netsh wlan show interfaces
+
+"List saved Wi-Fi networks" → netsh wlan show profiles
+
+"Check my Wi-Fi drivers" → netsh wlan show drivers
+
+"Ping Google" → ping google.com
+
+"Do I have internet?" → ping 8.8.8.8 -n 1
+
+"Trace my connection to Google" → tracert google.com
+
+"Check DNS cache" → ipconfig /displaydns
+
+"Clear DNS cache" → ipconfig /flushdns
+
+"Check routing table" → route print
+
+"Show network connections" → netstat -ano
+
+"Show Ethernet stats" → netstat -e
+
+"Show protocol stats" → netstat -s
+
+"Show mapped network drives" → net use
+
+🔊 Sound & Display (10)
+
+"Open volume mixer" → sndvol
+
+"Open sound settings" → mmsys.cpl
+
+"Open display settings" → desk.cpl
+
+"Open color settings" → control color
+
+"Open screen scaling" → dpiscaling
+
+"Show battery report" → powercfg /batteryreport
+
+"Show energy report" → powercfg /energy
+
+"Show sleep study" → powercfg /sleepstudy
+
+"Take a screenshot" → snippingtool /clip
+
+"Open Snipping Tool" → snippingtool
+
+📅 Calendar & Reminders (5)
+
+"What’s today’s date?" → date /t
+
+"What day of the week is today?" → (AI parses date /t)
+
+"Show me system updates" → wmic qfe list
+
+"Open Date & Time settings" → start timedate.cpl
+
+"When’s the last update installed?" → wmic qfe get InstalledOn
+
+🔐 User & Security (10)
+
+"Who am I logged in as?" → whoami
+
+"What’s my computer name?" → hostname
+
+"List all users on this PC" → net user
+
+"Do I have admin rights?" → net session (fails if not admin)
+
+"Show password policy" → net accounts
+
+"Open Firewall settings" → control firewall.cpl
+
+"Open User Accounts" → control userpasswords2
+
+"Show security policy" → secpol.msc
+
+"Show local users and groups" → lusrmgr.msc
+
+"Show saved credentials" → rundll32.exe keymgr.dll,KRShowKeyMgr
+
+🖊️ Notepad & Basic Apps (10)
+
+"Open Notepad" → notepad
+
+"Open Calculator" → calc
+
+"Open Paint" → mspaint
+
+"Open WordPad" → write
+
+"Open On-Screen Keyboard" → osk
+
+"Open Magnifier" → magnify
+
+"Open Narrator" → narrator
+
+"Open Character Map" → charmap
+
+"Open Snipping Tool" → snippingtool
+
+"Open Explorer" → explorer
+
+🧩 System Info & Settings (20)
+
+"Show system info" → systeminfo
+
+"Show Windows version" → ver
+
+"Show OS edition" → wmic os get caption
+
+"Show CPU model" → wmic cpu get name
+
+"Show RAM info" → wmic memorychip get capacity
+
+"Show GPU info" → wmic path win32_videocontroller get caption
+
+"Show architecture" → echo %PROCESSOR_ARCHITECTURE%
+
+"Show number of processors" → echo %NUMBER_OF_PROCESSORS%
+
+"Show drives" → wmic logicaldisk get name
+
+"Open Control Panel" → control
+
+"Open Device Manager" → devmgmt.msc
+
+"Open Disk Management" → diskmgmt.msc
+
+"Open Task Scheduler" → control schedtasks
+
+"Open Performance Monitor" → perfmon
+
+"Open Event Viewer" → eventvwr
+
+"Open Registry Editor" → regedit
+
+"Open System Information" → msinfo32
+
+"Run DirectX Diagnostic Tool" → dxdiag
+
+"Open Computer Management" → compmgmt.msc
+
+"Show environment variables" → set
+
+🎬 YouTube Search (Edge)
+start msedge "https://www.youtube.com/results?search_query=YOUR_QUERY"
+
+
+(Example: start msedge "https://www.youtube.com/results?search_query=lofi+hip+hop")
+
+🎵 Spotify
+Open Spotify app:
+start spotify
+
+Search in Spotify Web Player (works with any query):
+start msedge "https://open.spotify.com/search/YOUR_QUERY"
+
+
+(Example: start msedge "https://open.spotify.com/search/daft+punk")
+
+🔑 Direct Spotify URI (if you have the ID):
+start spotify:track:TRACK_ID
+start spotify:album:ALBUM_ID
+start spotify:playlist:PLAYLIST_ID
+

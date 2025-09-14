@@ -1,0 +1,6 @@
+flask
+flask-cors
+pyautogui
+requests
+psutil
+google-generativeai
